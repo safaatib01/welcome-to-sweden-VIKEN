@@ -1,0 +1,312 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+h2 {
+    font-size: 2rem;
+    padding: 0.5rem;
+    text-align: center;
+    background-color: #f1c669;
+    color: #154483;
+    word-spacing: 10px;
+}
+h3 {
+    font-size: 2rem;
+    padding: 0.5rem;
+    text-align: center;
+    color: #154483;
+    text-transform: uppercase;
+    word-spacing: 10px;
+}
+/* The Nav - Logo & Buttons .............................*/
+.nav-logo-container{
+    width: 100%;
+    height: 9rem;
+    background-color: rgb(252, 252, 252);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+.nav-logo img{
+    width: 182px;
+    height: 136px; 
+}
+.nav-buttons button{
+    padding: 5px;
+    margin: 30px;
+   border: transparent;
+   background: transparent;
+   cursor: pointer;
+   font-size: 30px;
+   color: #154483;
+}
+.nav-buttons button:hover{
+    color: #f1c669;
+}
+
+
+/* The Nav Links ............The Javascript class & id ....................................*/
+
+#bodyInformation1 h2, #bodyInformation2 h2{
+    background-color: #385a86;
+    padding: 30px;
+    color: white;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+.box-5-container{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.list-group-links-5{
+    margin: 10px;
+    list-style-type: none;
+    width: 700px;
+    height: 160px;
+    background-color: #bfccdd;
+    color:#154483;
+    padding: 10px;
+    font-size: 18px;
+}
+.list-group-links-5 span,.list-group-links-4 span, .list-group-links-2 span, .list-group-links-1-2 span, .list-group-links-1-1 span, .fetch-inter-activity span{
+    color: #443f35;
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.list-group-links-4{
+    margin: 5px;
+    list-style-type: none;
+    width: 90%;
+    height: 100px;
+    background-color: #bfccdd;
+    color:#154483;
+    padding: 10px;
+    font-size: 20px;
+
+}
+.box-5-container>.list-group-links-4, .box-5-container>.list-group-links-1-1,.box-5-container>.list-group-links-1-2{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.list-group-links-3{
+    margin: 10px;
+    list-style-type: none;
+    width: 1000px;
+    height: 120px;
+    background-color: #bfccdd;
+    color:#154483;
+    padding: 10px;
+    font-size: 20px;
+}
+.list-group-links-2{
+    margin: 10px;
+    list-style-type: none;
+    width: 1000px;
+    height: 230px;
+    background-color: #bfccdd;
+    color:#154483;
+    padding: 10px;
+    font-size: 20px;
+    float: right;
+}
+
+/*Good To Know Button ......  the class in js ..........................*/
+.list-group-links-1-1{
+    margin: 10px;
+    list-style-type: none;
+    width: 1100px;
+    height: 180px;
+    background-color: #bfccdd;
+    color:#154483;
+    padding: 10px;
+    font-size: 20px;
+    float: right;
+}
+.list-group-links-1-2{
+    margin: 10px;
+    list-style-type: none;
+    width: 1100px;
+    height: 400px;
+    background-color: #bfccdd;
+    color:#154483;
+    padding: 10px;
+    font-size: 20px;
+    float: right;
+}
+
+
+/*Good To Know Button ..........................*/
+.btn-good-to-know{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.btn-good-to-know button{
+    height: 50px;
+    width: 100%;
+    background: #154483;
+    color: white;
+    font-size: 25px;
+    margin-left: auto;
+    margin-right: auto;
+    word-spacing: 10px;
+    letter-spacing: 3px;
+}
+
+/* The image ...................................... */
+
+.the-image{
+    height: 100vh ;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: url(Rectangle\ 8.png);
+    background-size: cover;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.the-image h1{
+    color: white;
+    font-size: 50px;
+    margin-bottom: 100px;
+    text-transform: uppercase;
+    word-spacing: 20px;
+    letter-spacing: 13px;
+
+}
+form{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+.the-image h4{
+    padding: 0.5rem 1rem;
+    font-size: 1.9rem;
+    font-family: inherit;
+    text-transform: uppercase;
+    color: #f1c669;
+    word-spacing: 5px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+.the-image h4:hover{
+    color:#154483;
+}
+.search-refresh{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+.btn-refresh{
+    background-color: #154483;
+    border: 2px solid #154483;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+     border-radius: 50px;
+    font-size: 1rem;
+    color:  white;
+    font-family: inherit;
+    margin: 30px;
+}
+.search {
+    background-color: #f1c669;
+    border: 2px solid white;
+    padding: 0.5rem 1rem;
+    border-radius: 50px;
+    font-size: 1rem;
+    color: black;
+    font-family: inherit;
+}
+.search:focus {
+    outline: 0;
+    background-color: white;
+}
+.search::placeholder{
+    color: #154483;
+}
+.fetch-inter{
+    height: 250px;
+    width: 80%;
+    background-color: #bfccdd;
+    color: #154483;
+    list-style-type: none;
+    font-size: 20px;
+    padding: 20px;
+    margin-left:auto;
+    margin-right: auto;
+}
+.fetch-inter-activity{
+    height: 550px;
+    width: 80%;
+    background-color: #bfccdd;
+    color: #154483;
+    list-style-type: none;
+    font-size: 20px;
+    padding: 20px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+.three-btn-container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+
+}
+.three-btn-container button{
+    background-color:#154483 ;
+    color: white;
+    width: 15rem;
+    height: 4rem;
+    font-size: 20px;
+    word-spacing: 10px;
+    letter-spacing: 3px;
+}
+.three-btn-container button:hover{
+   
+    color:#f1c669;
+}
+
+
+
+
+
+
+
+/*----------------------------------------------------------------------------------------*/
+
+#showLocals {
+    display: none;
+    margin-bottom: 2%;
+}
+
+#showActivities {
+    display: none;
+    margin-bottom: 2%;
+}
+
+#showRegion {
+    display: none;
+    margin-bottom: 2%;
+}
+
+#getInfo {
+    float: right;
+}
+
+#output {
+    margin-top: 5%;
+}
