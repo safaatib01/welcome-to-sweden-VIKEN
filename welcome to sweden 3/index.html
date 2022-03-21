@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get information about your Municipility </title>
+
+    <!--Style CSS ---------------------->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+        integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+</head>
+
+<body>
+
+    <!--The logo ---------------------->
+        <div class="nav-logo-container">
+            <img src="image3.png" alt="logo">
+           
+            <div class="nav-buttons">
+            <!--  <button id="getInfo">Information</button>-   -->
+                <button id="getActivities">Activities</button>
+                <button id="getLocals">locals</button>
+                <button id="getRegion">Region</button>
+                <button id="getMuncipility">Municipilities</button>
+            </div>
+        </div>
+        
+    <!--The big image Slider  ---------->
+
+        <div class="the-image">
+            <h1>Welcome To Sweden</h1>
+            
+            <h4>Enter the name of the municipality <br> to get information easily </h4>
+
+            <div class="search-refresh">
+                <form id="form">
+                    <input type="text" placeholder="Search ..." id="search" class="search">
+                </form>
+
+                <button onClick="window.location.reload();" class="btn-refresh">Refresh</button>
+            </div>
+        </div>
+
+    <!--The Nav Links  ---------->
+       
+        <div id="bodyInformation1">
+             <div class="btn-good-to-know">
+                <button id="getgoodtoknowlist">Important Information</button>
+            </div>
+        </div>
+
+        <div id="bodyInformation2"></div>
+
+        <div id="output"></div>
+
+         <div class="three-btn-container">
+            <button id="showRegion">Show Region</button>
+            <button id="showLocals">Show Locals</button>
+            <button id="showActivities">Show Activities</button>
+        </div>
+
+        <div id="output3"></div>  
+        <div id="output2"></div> 
+        <div id="output1"></div>
+
+    <!--The Footer ---------->
+        <footer>
+            <div class="endtext-container">
+                <a href="#">Contact information</a>
+                <img src="image 2.png" alt="logo">
+                <a href="#">Updated 2022.03.21</a>
+            </div>
+        </footer>
+        
+    <script src="script.js"></script>
+</body>
+
+</html>
