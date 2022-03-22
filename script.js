@@ -23,15 +23,14 @@ fetch('municipalities.json')
   if (`${Municipalities.Ort}` === searchTerm) {
     document.getElementById('output').innerHTML =
     `<h3><b>The Contact Information</b></h3>
+    <div class="box-5-container">
       <ul class="fetch-inter">
-        <li>Ort: ${Municipalities.Ort}</li>
-        <li>Region namn: ${Municipalities['Region namn']}</li>
-        <li>E-Post: ${Municipalities['E-post']}</li>
-        <li>Telefon: ${Municipalities.Telefon}</li>
-        <li>Webbadress: ${Municipalities.Webbadress}</li>
-        <li>Postnr: ${Municipalities.Postnr}</li>
-        <li>Lans kod: ${Municipalities.Lanskod}</li>
-      </ul>`;
+        <li><span> ${Municipalities.Ort}</span> - <b> ${Municipalities['Region namn']}</b></li>
+        <li><b> E-Post: </b> ${Municipalities['E-post']}</li>
+        <li><b>Telefon:</b> ${Municipalities.Telefon}</li>
+        <li><b>Webbadress:</b> ${Municipalities.Webbadress}</li>
+        <li><b>Postnr:</b> ${Municipalities.Postnr}</li>
+      </ul></div>`;
     var kod = `${Municipalities.Kommunkod}`;
     var kodlan = `${Municipalities.Lanskod}`;
     //console.log(kod);
@@ -46,16 +45,18 @@ fetch('municipalities.json')
       .then((data) => {
         data.Region.forEach(function (Region) {
           if (`${Region.Lanskod}` === kodlan) {
-            document.getElementById('output3').innerHTML =`<h3><b>Regions Name</b></h3>
-                                                            <ul class="fetch-inter">
-                                                              <li><b> ${Region.NameSV}</b></li>
-                                                              <li> ${Region['E-post']}</li>
-                                                              <li> ${Region['Telefon']}</li>
-                                                              <li> ${Region.Webbadress}</li>
-                                                              <li> ${Region['Postaddress 1']}</li>
-                                                              <li>Postnr: ${Region.Postnr}</li>
-                                                              <li> ${Region.Ort}</li>
-                                                            </ul>`;
+        document.getElementById('output3').innerHTML =
+        `<h3><b>Regions Name</b></h3>
+        <div class="box-5-container">
+          <ul class="fetch-inter">
+              <li><span> ${Region.NameSV}</span></li>
+              <li><b> E-Post: </b> ${Region['E-post']}</li>
+              <li><b>Telefon:</b> ${Region['Telefon']}</li>
+              <li><b>Webbadress:</b> ${Region.Webbadress}</li>
+              <li><b>Postnr:</b> ${Region['Postaddress 1']}</li>
+              <li><b>Postnr: </b>${Region.Postnr}</li>
+              <li><span> ${Region.Ort}</span></li>
+          </ul><div>`;
     //function showLocals()
     document.getElementById('showLocals').addEventListener('click', getLocals);
     function getLocals() {
@@ -66,14 +67,16 @@ fetch('municipalities.json')
       data.Locals.forEach(function (Locals) {
       //console.log(`${Locals.KommunID}`);
       if (`${Locals.KommunID}` === kod) {
-        document.getElementById('output1').innerHTML =`<h3><b>Locals Name</b></h3>
-                                                        <ul class="fetch-inter">
-                                                          <li>Name: ${Locals.Name}</li>
-                                                          <li>TypeOfHelp: ${Locals.TypeOfHelp}</li>
-                                                          <li>What languages speak?: ${Locals['What languages speak?']}</li>
-                                                          <li>Contact info: ${Locals['Contact info']}</li>
-                                                          <li>KommunID: ${Locals.KommunID}</li>
-                                                        </ul>`;
+        document.getElementById('output2').innerHTML =`<h3><b>Locals Name</b></h3>
+        <div class="box-5-container">
+          <ul class="fetch-inter">
+            <li><span>${Locals.Name}</span></li>
+            <li><b>TypeOfHelp: </b>${Locals.TypeOfHelp}</li>
+            <li><b>What languages speak? </b> ${Locals['What languages speak?']}</li>
+            <li><b>Contact info :</b> ${Locals['Contact info']}</li>
+            <li><b>KommunID :</b> ${Locals.KommunID}</li>
+          </ul>
+        </div>`;
     //function getactivities()
     document.getElementById('showActivities').addEventListener('click', showActivities);
     function showActivities() {
@@ -83,36 +86,25 @@ fetch('municipalities.json')
       .then((data) => {
         data.Activities.forEach(function (Activities) {
           if (`${Activities.KommunID}` === kod) {
-            document.getElementById('output2').innerHTML += `<h3><b>Aktivities</b></h3>
-                                                              <ul class="fetch-inter-activity">
-                                                                <li><span>${Activities.TitleSV}</span><b> ${Activities.Date}</b></li>
-                                                                <li><b>Time :</b> ${Activities['Time from']} - ${Activities['Time To']}</li>
-                                                                <li><b>Discription SV. :</b> ${Activities.DescriptionSV}</li>
-                                                                <li><b>Title UA. :</b> ${Activities.TitleUA}</li>
-                                                                <li><b>Description UA. :</b> ${Activities.DescriptionUA}</li>
-                                                                <li><b>Adress :</b> ${Activities.Adress}</li>
-                                                                <li><b>Booking Link :</b> ${Activities['Booking link']}</li>
-                                                                <li><b>Name RU. :</b> ${Activities.NameRU}</li>
-                                                                <li><b>Description RU. :</b>${Activities['Description RU']}</li>
-                                                                <li><b>Name EN :</b> ${Activities.NameEN}</li>  
-                                                                <li><b>Link :</b> <ins>${Activities.Link}</ins></li>
-                                                                <li><b>Booking Link :</b> <ins>${Activities['Booking link']}</ins></li>
-                                                                <li><b>Picture :</b> ${Activities.PictureSV}</li>
-                                                              </ul>`;}
-                                                        });
-                                                    })
-                                                 }
-                                               }
-                                           });
-                                         })
-                                      }
-                                 }   
-                          });
-                     })
-                 }
-             };
-        })
-    })
+            document.getElementById('output1').innerHTML += `
+            <div class="box-4-container">
+            <h3><b>Aktivity</b></h3>
+              <ul class="fetch-inter-activity">
+                <li><span>${Activities.TitleSV}</span>  <b> ${Activities.Date}</b></li>
+                <li><b>Time :</b> ${Activities['Time from']} - ${Activities['Time To']}</li>
+                <li><b>Discription SV. :</b> ${Activities.DescriptionSV}</li>
+                <li><b>Title UA. :</b> ${Activities.TitleUA}</li>
+                <li><b>Description UA. :</b> ${Activities.DescriptionUA}</li>
+                <li><b>Adress :</b> ${Activities.Adress}</li>
+                <li><b>Booking Link :</b> ${Activities['Booking link']}</li>
+                <li><b>Name EN :</b> ${Activities.NameEN}</li>  
+                <li><b>Link :</b> <ins>${Activities.Link}</ins></li>
+                <li><b>Booking Link :</b> <ins>${Activities['Booking link']}</ins></li>
+                <li><b>Picture :</b> ${Activities.PictureSV}</li>
+              </ul>
+            </div>`;}
+          });}) } }}); }) } }   });})} }; })
+})
 })
 
 
@@ -186,7 +178,7 @@ function getLocals() {
         bodyInformation2 += `
         <div class="box-5-container">
         <ul class="list-group-links-3">
-          <li><b> Name : </b> ${Locals.Name}  - <b> Type Of Help : </b> ${Locals.TypeOfHelp}</li>
+          <li><span> ${Locals.Name} </span> - <b> Type Of Help : </b> ${Locals.TypeOfHelp}</li>
           <li><b> What languages speak : </b> ${Locals['What languages speak?']}</li>
           <li><b> Contact information : </b>${Locals['Contact info']}</li>
         </ul></div>
